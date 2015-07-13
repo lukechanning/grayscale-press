@@ -149,7 +149,9 @@ echo '<link rel="stylesheet" type="text/css" href="/wp-content/plugins/grayscale
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="js/main.min.js"></script>
+    <?php
+    echo '<script src="' . plugin_dir_url() . '/grayscale-landing/js/main.min.js"></script>';
+    ?>
 
 </body>
 
