@@ -1,12 +1,10 @@
 I do not take credit, for the designing of this template!
 
-The original version can be found at [Start Bootstrap](http://startbootstrap.com/) - [Grayscale](http://startbootstrap.com/template-overviews/grayscale/)
+## What is it?
 
-[Grayscale](http://startbootstrap.com/template-overviews/grayscale/) is a multipurpose, one page HTML theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This template features various content sections and a Google Maps section with a custom map marker.
+Grayscale Press is a WordPress reworking of [Grayscale](http://startbootstrap.com/template-overviews/grayscale/), a multipurpose, one page HTML theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). It is designed to be a rapid-fire solution to a landing page for your WP installation. It is meant to stand oustide your theme, acting as a special-cases page for events, promotions, etc. It's also made to look bloody good, of course!
 
-## What's different?
-
-This version of the template uses Compass and SASS instead of LESS, and builds on the bower dependency manager.
+The template itself uses Gulp, Bower and SCSS for development. You do not need to use these things, if you want to work out of the box. If you want to do some customization, it should be easier thanks to the extras! 
 
 ## Getting Started
 
@@ -16,17 +14,13 @@ To use this template, choose one of the following options to get started:
 1. Fork/download this repository on GitHub
 2. Install bower dependencies (`bower update`)
 3. Use Gulp to compile/update
-4. Open up <code>index.html</code>
-5. Enjoy :smile:
+4. Modify template to meet specific design / component needs
+5. Upload directly to `Plugins` directory within `wp-content`
+6. Add widget areas and enjoy! 
 
 ## Updates
-### 2015-02-26
-* Added Gulp task runner (to minify/uglify and generally ensure that everything is it's place)
-* Removed compass as a dependency
-* Restructured the SASS files for better separation
-* Updated bower dependencies
 
-### 2014-11-29
+### 2015-06-07
 * Initial commit
 
 ## Bugs and Issues

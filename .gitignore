@@ -61,3 +61,6 @@ node_modules
 
 ### Images
 images
+
+### Mac OS X Junk
+.DS_Store
