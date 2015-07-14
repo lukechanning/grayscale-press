@@ -11784,7 +11784,7 @@ if (typeof jQuery === 'undefined') {
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
- //Add Class to A tags in custom nav menu 
+ //Add class to tags in custom Grayscale nav menu 
  $(function() {
     $('ul.scroll li a').addClass('page-scroll');
     $(".scroll").append('<li class="hidden"><a href="#page-top"></a></li>');

@@ -1,9 +1,5 @@
 <?php
-
-/*Enqueue style
----------------------------------- */
-echo '<link rel="stylesheet" type="text/css" href="' . plugin_dir_url(__FILE__) . '/styles/main.min.css">';
-        
+    include ('header-grayscale.php');
 ?>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -47,7 +43,16 @@ echo '<link rel="stylesheet" type="text/css" href="' . plugin_dir_url(__FILE__) 
     </nav>
 
     <!-- Intro Header -->
-    <header class="intro">
+    <?php
+        echo '<header class="intro" style="';  
+        if( get_theme_mod( 'grayscale_top') ) :
+            echo 'background-image: url(';
+            echo esc_url( get_theme_mod( 'grayscale_top' ) );
+            echo ');">';
+        else:
+            echo '">';
+        endif;    
+    ?>
         <div class="intro-body">
             <div class="container">
                 <div class="row">
@@ -82,7 +87,16 @@ echo '<link rel="stylesheet" type="text/css" href="' . plugin_dir_url(__FILE__) 
 
     <!-- Download SASS Section -->
     <section id="download" class="content-section text-center">
-        <div class="download-section">
+        <?php
+            echo '<div class="download-section" style="';
+            if( get_theme_mod( 'grayscale_download') ) :
+                echo 'background-image: url(';
+                echo esc_url( get_theme_mod( 'grayscale_download' ) );
+                echo ');">';
+            else:
+                echo '">';
+            endif; 
+        ?>
             <div class="container">
                 <?php if ( is_active_sidebar( 'grayscale_cta_section' ) ) : ?>
                         <?php dynamic_sidebar( 'grayscale_cta_section' ); ?>
@@ -107,19 +121,7 @@ echo '<link rel="stylesheet" type="text/css" href="' . plugin_dir_url(__FILE__) 
         <!-- #intro-widget -->
     <?php endif; ?>
 
-    <!-- Footer -->
-   <!--  <footer>
-        <div class="container text-center">
-            <p>Copyright &copy; Your Website 2014</p>
-        </div>
-    </footer> -->
 
-    <?php
-
-    get_footer();
-
-    /*Enqueue javascript
-    ---------------------------------- */
-
-    echo '<script src="' . plugin_dir_url(__FILE__) . '/js/main.min.js"></script>';
-    ?>
+<?php
+include ('footer-grayscale.php');
+?>

@@ -155,9 +155,11 @@
     } 
     add_action( 'init', 'register_grayscale_menu' );
 
-//Add customizer functionality for Grayscale logo
+//Add customizer functionality for Grayscale
 
-    function grayscale_logo_register( $wp_customize ) {
+    function grayscale_customize_register( $wp_customize ) {
+
+        //Add Custom Header
         $wp_customize->add_section( 'grayscale_logo_section' , array(
         'title'       => __( 'Grayscale Logo', 'grayscale' ),
         'priority'   => 30,
@@ -171,8 +173,39 @@
         'section' => 'grayscale_logo_section',
         'settings' => 'grayscale_logo',
         ) ) );
+
+        //Add Customize Top Background
+        $wp_customize->add_section( 'grayscale_top_background' , array(
+        'title'       => __( 'Grayscale Top Photo', 'grayscale' ),
+        'priority'   => 30,
+        'description' => 'Upload a photo to replace the top-section background, deafult is 1500 x 1125',
+        ) );
+        $wp_customize->add_setting( 'grayscale_top' );
+        $wp_customize->add_control( new WP_Customize_Image_Control(
+        $wp_customize, 'grayscale_top', array(
+        'label'   => __( 'Grayscale Top Photo', 'themeslug' ),
+        'section' => 'grayscale_top_background',
+        'settings' => 'grayscale_top',
+        ) ) );
+
+        //Add Customize Top Background
+        $wp_customize->add_section( 'grayscale_download_section' , array(
+        'title'       => __( 'Grayscale Download Photo', 'grayscale' ),
+        'priority'   => 30,
+        'description' => 'Upload a photo to replace the download-section background, deafult is 1850 by 400',
+        ) );
+        $wp_customize->add_setting( 'grayscale_download' );
+        $wp_customize->add_control( new WP_Customize_Image_Control(
+        $wp_customize, 'grayscale_download', array(
+        'label'   => __( 'Grayscale CTA Photo', 'themeslug' ),
+        'section' => 'grayscale_download_section',
+        'settings' => 'grayscale_download',
+        ) ) );
+
     }
-    add_action( 'customize_register', 'grayscale_logo_register' );
+    add_action( 'customize_register', 'grayscale_customize_register' );
+
+//Add custom background 
 
 
 ?>
