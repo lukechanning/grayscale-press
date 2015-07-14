@@ -2,7 +2,7 @@
     include ('header-grayscale.php');
 ?>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" <?php body_class( 'class-name' ); ?>>
 
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">

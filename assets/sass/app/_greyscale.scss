@@ -10,6 +10,9 @@ body {
   color: $grayscale-light;
   background-color: $grayscale-dark;
   -webkit-tap-highlight-color: transparentize($grayscale-light, 0.8);
+  &.admin-bar .navbar {
+    padding-top: 3.2rem;
+  }
 }
 
 h1, .h1,
@@ -280,6 +283,14 @@ ul.banner-social-buttons {
 }
 
 @media(max-width:$screen-xs-max) {
+
+  body.admin-bar .navbar {
+    padding-top: 0;
+  }
+
+  .intro {
+    padding: 100px 0 0 0;
+  }
 
   ul.banner-social-buttons {
 
