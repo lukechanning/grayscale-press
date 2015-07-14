@@ -1,8 +1,8 @@
-I do not take credit, for the designing of this template!
+I do not take credit for the designing of this template!
 
 ## What is it?
 
-Grayscale Press is a WordPress reworking of [Grayscale](http://startbootstrap.com/template-overviews/grayscale/), a multipurpose, one page HTML theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). It is designed to be a rapid-fire solution to a landing page for your WP installation. It is meant to stand oustide your theme, acting as a special-cases page for events, promotions, etc. It's also made to look bloody good, of course!
+Grayscale Press is a WordPress reworking of [Grayscale](http://startbootstrap.com/template-overviews/grayscale/) & [Grayscale SASS](https://github.com/blackfyre/grayscale-sass), a multipurpose, one page HTML theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). It is designed to be a rapid-fire solution to a landing page for your WP installation. It is meant to stand oustide your theme, acting as a special-cases page for events, promotions, etc. It's also made to look bloody good, of course!
 
 The template itself uses Gulp, Bower and SCSS for development. You do not need to use these things, if you want to work out of the box. If you want to do some customization, it should be easier thanks to the extras! 
 
@@ -20,7 +20,7 @@ To use this template, choose one of the following options to get started:
 
 ## Updates
 
-### 2015-06-07
+### 2015-07-09
 * Initial commit
 
 ## Bugs and Issues
@@ -34,8 +34,8 @@ Start Bootstrap was created by and is maintained by **David Miller**, Managing P
 * https://twitter.com/davidmillerskt
 * https://github.com/davidtmiller
 
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat). Special thanks goes to [Blackfyre](https://github.com/blackfyre/grayscale-sass) for the excellent SASS setup.
 
 ## Copyright and License
 
-Copyright 2014 Iron Summit Media Strategies, LLC. Code released under the [Apache 2.0](https://github.com/IronSummitMedia/startbootstrap-grayscale/blob/gh-pages/LICENSE) license.
+Copyright 2015 Iron Summit Media Strategies, LLC. Code released under the [Apache 2.0](https://github.com/IronSummitMedia/startbootstrap-grayscale/blob/gh-pages/LICENSE) license.
