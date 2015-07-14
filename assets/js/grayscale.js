@@ -182,4 +182,27 @@ function init() {
         icon: image
     });
 
+    //Enable Parallax on background images
+    jQuery(function( $ ){
+
+        $(window).scroll(function(){
+
+            scrolltop = $(window).scrollTop()
+            scrollwindow = scrolltop + $(window).height();
+
+            $(".intro").css("backgroundPosition", "0px " + -(scrolltop/6) + "px");
+
+
+            // Section Above Footer
+        if( scrollwindow > $(".download-section").offset().top ) {
+
+            backgroundscroll = scrollwindow - $(".download-section").offset().top;
+            $(".download-section").css("backgroundPosition", "0px " + -(backgroundscroll/6) + "px");
+
+        }
+
+        });
+
+    });
+
 }
