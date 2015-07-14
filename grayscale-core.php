@@ -202,6 +202,38 @@
         'settings' => 'grayscale_download',
         ) ) );
 
+        $wp_customize->add_section( 'grayscale_colors' , array(
+        'title'       => __( 'Grayscale Colors', 'grayscale' ),
+        'priority'   => 30,
+        'description' => 'Add colors to change the look of Grayscale Press',
+        ) );
+
+        //Add section, text, and link colors
+        $wp_customize->add_setting( 'section_color' );
+        $wp_customize->add_control( new WP_Customize_Color_Control( 
+        $wp_customize, 'section_color', array(
+                'label'      => __( 'Sections Color', 'grayscale' ),
+                'section'    => 'grayscale_colors',
+                'settings'   => 'section_color',
+            ) )
+        );
+        $wp_customize->add_setting( 'grayscale_text_color' );
+        $wp_customize->add_control( new WP_Customize_Color_Control( 
+        $wp_customize, 'grayscale_text_color', array(
+                'label'      => __( 'Text Color', 'grayscale' ),
+                'section'    => 'grayscale_colors',
+                'settings'   => 'grayscale_text_color',
+            ) )
+        );
+        $wp_customize->add_setting( 'grayscale_link_color' );
+        $wp_customize->add_control( new WP_Customize_Color_Control( 
+        $wp_customize, 'grayscale_link_color', array(
+                'label'      => __( 'Link Color', 'grayscale' ),
+                'section'    => 'grayscale_colors',
+                'settings'   => 'grayscale_link_color',
+            ) )
+        );
+
     }
     add_action( 'customize_register', 'grayscale_customize_register' );
 
