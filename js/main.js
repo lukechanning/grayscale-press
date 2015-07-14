@@ -11784,6 +11784,12 @@ if (typeof jQuery === 'undefined') {
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+ //Add Class to A tags in custom nav menu 
+ $(function() {
+    $('ul.scroll li a').addClass('page-scroll');
+    $(".scroll").append('<li class="hidden"><a href="#page-top"></a></li>');
+});
+
 // jQuery to collapse the navbar on scroll
 $(window).scroll(function() {
     if ($(".navbar").offset().top > 50) {
@@ -11948,11 +11954,12 @@ function init() {
     var map = new google.maps.Map(mapElement, mapOptions);
 
     // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
-    var image = 'images/map-marker.png';
+    var image = './wp-content/plugins/grayscale-landing/images/map-marker.png';
     var myLatLng = new google.maps.LatLng(40.6700, -73.9400);
     var beachMarker = new google.maps.Marker({
         position: myLatLng,
         map: map,
         icon: image
     });
+
 }
