@@ -43,15 +43,12 @@
     </nav>
 
     <!-- Intro Header -->
+    <?php $introBG = get_theme_mod( 'grayscale_top' ); ?>
+    <header class="intro" style=" <?php if( $introBG ) : ?> background-image: url(<?php echo esc_url( $introBG ) ?> );">
     <?php
-        echo '<header class="intro" style="';  
-        if( get_theme_mod( 'grayscale_top') ) :
-            echo 'background-image: url(';
-            echo esc_url( get_theme_mod( 'grayscale_top' ) );
-            echo ');">';
         else:
             echo '">';
-        endif;    
+        endif;
     ?>
         <div class="intro-body">
             <div class="container">
@@ -70,7 +67,23 @@
         <div class="row">
             <?php if ( is_active_sidebar( 'grayscale_about_section' ) ) : ?>
                     <?php dynamic_sidebar( 'grayscale_about_section' ); ?>
-                <!-- #intro-widget -->
+                <!-- #about-widget -->
+            <?php endif; ?>
+        </div>
+    </section>
+    
+    <!-- Info Section -->
+    <?php $infoBG = get_theme_mod( 'grayscale_info'); ?>
+    <section id="info" class="container info-section text-center" style="<?php if( $infoBG ) : ?> background-image: url(<?php echo esc_url($introBG) ?> );">
+    <?php
+        else:
+            echo '">';
+        endif;
+    ?>
+        <div class="row">
+            <?php if ( is_active_sidebar( 'grayscale_info_section' ) ) : ?>
+                    <?php dynamic_sidebar( 'grayscale_info_section' ); ?>
+                <!-- #info-widget -->
             <?php endif; ?>
         </div>
     </section>
@@ -80,7 +93,7 @@
         <div class="row">
             <?php if ( is_active_sidebar( 'grayscale_contact_section' ) ) : ?>
                     <?php dynamic_sidebar( 'grayscale_contact_section' ); ?>
-                <!-- #intro-widget -->
+                <!-- #contact-widget -->
             <?php endif; ?>
         </div>
     </section>
@@ -100,7 +113,7 @@
             <div class="container">
                 <?php if ( is_active_sidebar( 'grayscale_cta_section' ) ) : ?>
                         <?php dynamic_sidebar( 'grayscale_cta_section' ); ?>
-                    <!-- #intro-widget -->
+                    <!-- #download-widget -->
                 <?php endif; ?>
             </div>
         </div>
@@ -111,14 +124,14 @@
         <div class="row">
             <?php if ( is_active_sidebar( 'grayscale_last_section' ) ) : ?>
                     <?php dynamic_sidebar( 'grayscale_last_section' ); ?>
-                <!-- #intro-widget -->
+                <!-- #final-widget -->
             <?php endif; ?>
         </div>
     </section>
 
     <?php if ( is_active_sidebar( 'grayscale_map_section' ) ) : ?>
             <?php dynamic_sidebar( 'grayscale_map_section' ); ?>
-        <!-- #intro-widget -->
+        <!-- #map-widget -->
     <?php endif; ?>
 
 

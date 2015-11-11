@@ -3,9 +3,9 @@
 * Plugin Name: Grayscale Press
 * Plugin URI: https://github.com/lukechanning/grayscale-press
 * Description: All-inclusive plugin version of Grayscale Bootstrap theme.
-* Version: 0.1 beta
+* Version: 1.0 beta
 * Author: Luke Patrick
-* Author URI: http://snodandjeff.com
+* Author URI: http://routerchowder.com
 * License: Apache License v2.0
 */
 
@@ -111,6 +111,14 @@
             'after_title'   => '</h2>',
         ) );
         register_sidebar( array(
+            'name'          => 'Grayscale Info Section',
+            'id'            => 'grayscale_info_section',
+            'before_widget' => '<div class="col-lg-8 col-lg-offset-2">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2>',
+            'after_title'   => '</h2>',
+        ) );
+        register_sidebar( array(
             'name'          => 'Grayscale Contact Section',
             'id'            => 'grayscale_contact_section',
             'before_widget' => '<div class="col-lg-8 col-lg-offset-2">',
@@ -137,7 +145,7 @@
         register_sidebar( array(
             'name'          => 'Grayscale Map Section',
             'id'            => 'grayscale_map_section',
-            'before_widget' => '<div id="map">',
+            'before_widget' => '<div id="map" class="map-section">',
             'after_widget'  => '</div>',
         ) );
 
@@ -169,7 +177,7 @@
         $wp_customize->add_setting( 'grayscale_logo' );
         $wp_customize->add_control( new WP_Customize_Image_Control(
         $wp_customize, 'grayscale_logo', array(
-        'label'   => __( 'Logo', 'themeslug' ),
+        'label'   => __( 'Logo', 'grayscale' ),
         'section' => 'grayscale_logo_section',
         'settings' => 'grayscale_logo',
         ) ) );
@@ -183,12 +191,26 @@
         $wp_customize->add_setting( 'grayscale_top' );
         $wp_customize->add_control( new WP_Customize_Image_Control(
         $wp_customize, 'grayscale_top', array(
-        'label'   => __( 'Grayscale Top Photo', 'themeslug' ),
+        'label'   => __( 'Grayscale Top Photo', 'grayscale' ),
         'section' => 'grayscale_top_background',
         'settings' => 'grayscale_top',
         ) ) );
-
-        //Add Customize Top Background
+        
+        //Add Customize Info Background
+        $wp_customize->add_section( 'grayscale_info_section' , array(
+        'title'       => __( 'Grayscale Info Section Photo', 'grayscale' ),
+        'priority'   => 30,
+        'description' => 'Upload a photo to replace the info-section background, deafult is 1850 by 400',
+        ) );
+        $wp_customize->add_setting( 'grayscale_info' );
+        $wp_customize->add_control( new WP_Customize_Image_Control(
+        $wp_customize, 'grayscale_info', array(
+        'label'   => __( 'Grayscale Info Photo', 'grayscale' ),
+        'section' => 'grayscale_info_section',
+        'settings' => 'grayscale_info',
+        ) ) );
+        
+        //Add Customize Download Background
         $wp_customize->add_section( 'grayscale_download_section' , array(
         'title'       => __( 'Grayscale Download Photo', 'grayscale' ),
         'priority'   => 30,
@@ -197,7 +219,7 @@
         $wp_customize->add_setting( 'grayscale_download' );
         $wp_customize->add_control( new WP_Customize_Image_Control(
         $wp_customize, 'grayscale_download', array(
-        'label'   => __( 'Grayscale CTA Photo', 'themeslug' ),
+        'label'   => __( 'Grayscale CTA Photo', 'grayscale' ),
         'section' => 'grayscale_download_section',
         'settings' => 'grayscale_download',
         ) ) );

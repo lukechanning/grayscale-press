@@ -11,7 +11,7 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     rename = require('gulp-rename'),
     concat = require('gulp-concat'),
-    notify = require('gulp-notify'),
+    //notify = require('gulp-notify'),
     cache = require('gulp-cache'),
     del = require('del');
 
@@ -46,7 +46,7 @@ gulp.task('styles', function() {
         .pipe(rename({suffix: '.min'}))
         .pipe(minifycss())
         .pipe(gulp.dest(paths.stylesOutput))
-        .pipe(notify({ message: 'Styles task complete' }));
+        //.pipe(notify({ message: 'Styles task complete' }));
 });
 
 gulp.task('scripts', function() {
@@ -58,20 +58,20 @@ gulp.task('scripts', function() {
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
         .pipe(gulp.dest(paths.scriptsOutput))
-        .pipe(notify({ message: 'Scripts task complete' }));
+        //.pipe(notify({ message: 'Scripts task complete' }));
 });
 
 gulp.task('images', function() {
     return gulp.src(paths.images)
         .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
         .pipe(gulp.dest(paths.imagesOutput))
-        .pipe(notify({ message: 'Images task complete' }));
+        //.pipe(notify({ message: 'Images task complete' }));
 });
 
 gulp.task('fonts', function() {
     return gulp.src(paths.fonts)
     .pipe(gulp.dest(paths.fontsOutput))
-    .pipe(notify({ message: 'Fonts task complete', onLast: true }));
+    //.pipe(notify({ message: 'Fonts task complete', onLast: true }));
 });
 
 gulp.task('clean', function(cb) {

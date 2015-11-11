@@ -11,13 +11,14 @@ The template itself uses Gulp, Bower and SCSS for development. You do not need t
 To use this template, choose one of the following options to get started:
 
 ### DIY, You Savvy Dev You
-0. (required once if not already installed) Install bower(`npm install -g bower`), node dependencies(`npm install`) sass (`gem install sass`)
+0. (required once if not already installed) Install bower(`npm install -g bower`) & sass (`gem install sass`)
 1. Fork/download this repository on GitHub
-2. Install bower dependencies (`bower update`)
-3. Use Gulp to compile/update
-4. Modify template to meet specific design / component needs
-5. Upload directly to `Plugins` directory within `wp-content`
-6. Add widget areas and enjoy! 
+2. Invest in some node dependencies(`npm install`)
+3. Install bower dependencies (`bower update`)
+4. Use Gulp to compile/update
+5. Modify template to meet specific design / component needs
+6. Upload directly to `Plugins` directory within `wp-content`
+7. Add widget areas and enjoy! 
 
 ### Take the Shortcut
 0. Download the packaged .zip file contained here in the repo
